@@ -1,6 +1,6 @@
 # Extras — Revisão dos simulados DP-900
 
-> Anotações de revisão construídas a partir dos pontos que considerei mais difíceis durante os simulados da certificação **Microsoft Azure Data Fundamentals (DP-900)**.
+> Este arquivo reúne conceitos que precisei revisar com mais atenção durante os simulados da certificação **Microsoft Azure Data Fundamentals (DP-900)**. A proposta é registrar não apenas o conteúdo revisado, mas também as associações e regras mentais que utilizei para diferenciar serviços e evitar erros recorrentes.
 
 Durante a preparação, utilizei simulados não apenas para medir meu desempenho, mas principalmente para identificar os conceitos em que ainda tinha dúvidas ou confundia serviços com finalidades semelhantes.
 
@@ -14,7 +14,7 @@ Um dos pontos de atenção foi diferenciar serviços que podem aparecer em cená
 
 ## Azure Data Factory
 
-O **Azure Data Factory** está relacionado principalmente à:
+O **Azure Data Factory** está relacionado principalmente a:
 
 ```text
 ETL / ELT
@@ -74,7 +74,7 @@ HDInsight
 
 Nas revisões, o **Azure Synapse Analytics** aparece associado a cenários analíticos e ao processamento utilizando Apache Spark.
 
-Também pode ser utilizado para realizar análises sobre dados operacionais em cenários próximos de tempo real.
+Também aparece relacionado à análise próxima do tempo real sobre dados operacionais.
 
 ---
 
@@ -95,13 +95,13 @@ Data Warehouse
 └── Snowflake Schema
 ```
 
-São voltados para análise e leitura.
+São voltados principalmente para análise e leitura.
 
 ---
 
 ## Banco de dados relacional
 
-Um banco relacional tradicional é normalmente voltado para operações transacionais.
+Um banco relacional utilizado em cargas transacionais é normalmente voltado para operações como:
 
 ```text
 Banco transacional
@@ -125,8 +125,8 @@ Data Lake
 Arquivos
 ↓
 Dados estruturados
-Semiestruturados
-Não estruturados
+Dados semiestruturados
+Dados não estruturados
 ```
 
 ---
@@ -137,7 +137,7 @@ Esse foi outro conceito importante de revisão.
 
 ## Sistemas transacionais
 
-Bancos transacionais tendem a ser mais **normalizados**.
+Bancos transacionais tendem a utilizar estruturas mais **normalizadas**.
 
 A normalização:
 
@@ -207,7 +207,7 @@ O **Dataset** representa os dados que serão utilizados como entrada ou saída.
 
 ```text
 Dataset
-→ estrutura / referência dos dados
+→ referência aos dados
 ```
 
 ---
@@ -250,7 +250,7 @@ Esse conjunto de serviços pode ser facilmente confundido.
 
 ## Azure Event Hubs
 
-Utilizado principalmente como fonte ou coletor de eventos.
+Utilizado principalmente para ingestão e transporte de grandes volumes de eventos.
 
 ```text
 Eventos
@@ -262,7 +262,7 @@ Event Hubs
 
 ## Azure IoT Hub
 
-Voltado principalmente a dados provenientes de dispositivos IoT.
+Voltado principalmente a eventos provenientes de dispositivos IoT.
 
 ```text
 Dispositivos IoT
@@ -277,7 +277,7 @@ IoT Hub
 É responsável pelo **processamento** dos dados de streaming.
 
 ```text
-Event Hub / IoT Hub
+Event Hubs / IoT Hub
         ↓
 Stream Analytics
         ↓
@@ -740,7 +740,7 @@ Warehouse
 → Data Warehouse
 ```
 
-É a escolha mais indicada nas anotações para análise corporativa estruturada em larga escala.
+É a escolha indicada nas minhas revisões para análise estruturada em larga escala.
 
 ---
 
@@ -853,9 +853,7 @@ Cosmos DB
 
 Um detalhe que apareceu nos simulados foi a diferença de compatibilidade entre as opções de SQL Server.
 
-Nas anotações:
-
-> SQL Server em Azure VM executando Windows é a opção que oferece suporte ao conjunto completo de recursos do SQL Server na nuvem.
+Nas minhas anotações, o **SQL Server em Azure VM executando Windows** aparece como a alternativa que oferece suporte ao conjunto completo de recursos do SQL Server na nuvem.
 
 As demais opções possuem diferentes níveis de compatibilidade:
 
@@ -966,5 +964,379 @@ REVISÃO DOS SIMULADOS
 
 ---
 
-> Estas anotações representam os conceitos que considerei mais importantes revisar após os simulados realizados durante minha preparação para a certificação **Microsoft Azure Data Fundamentals (DP-900)**.
+# 🔎 Como eu diferenciava serviços parecidos nos simulados
 
+Durante os simulados, percebi que muitas questões não exigiam apenas conhecer um serviço, mas principalmente saber **diferenciá-lo de outras opções parecidas**.
+
+Por isso, criei algumas associações rápidas para identificar o serviço mais adequado de acordo com o cenário apresentado.
+
+| Se a questão fala em...                                  | Eu associava a...              |
+| -------------------------------------------------------- | ------------------------------ |
+| Pipeline, integração ou ETL/ELT                          | Azure Data Factory             |
+| Processamento distribuído com Apache Spark               | Azure Databricks               |
+| Grande volume de eventos                                 | Azure Event Hubs               |
+| Dispositivos e telemetria IoT                            | Azure IoT Hub                  |
+| Processamento contínuo de streams                        | Azure Stream Analytics         |
+| Logs e telemetria para análise                           | Azure Data Explorer            |
+| Compartilhamento de arquivos por SMB ou NFS              | Azure Files                    |
+| Grandes volumes de arquivos para analytics               | Azure Data Lake Storage Gen2   |
+| Disco de máquina virtual                                 | Page Blob                      |
+| Armazenamento chave-valor simples                        | Azure Table Storage            |
+| Banco NoSQL global e de baixa latência                   | Azure Cosmos DB                |
+| Documentos JSON                                          | Cosmos DB for NoSQL            |
+| Aplicação MongoDB existente                              | Cosmos DB for MongoDB          |
+| Família de colunas                                       | Cosmos DB for Apache Cassandra |
+| Dados em grafo                                           | Cosmos DB for Apache Gremlin   |
+| Nova aplicação SQL desenvolvida para nuvem               | Azure SQL Database             |
+| Migração de SQL Server com alta compatibilidade          | Azure SQL Managed Instance     |
+| Controle completo sobre SQL Server e sistema operacional | SQL Server em Azure VM         |
+| Analytics estruturado baseado em SQL                     | Data Warehouse                 |
+| Arquivos + Spark + analytics                             | Lakehouse                      |
+| Eventos e séries temporais no Microsoft Fabric           | Eventhouse                     |
+
+---
+
+# ⚠️ Pegadinhas que eu precisei reforçar
+
+Alguns conceitos apareciam em alternativas muito parecidas e exigiram atenção extra durante os simulados.
+
+## Azure Event Hubs ≠ Azure Stream Analytics
+
+```text
+Event Hubs
+→ recebe e transporta eventos
+
+Stream Analytics
+→ processa os eventos
+```
+
+---
+
+## Azure IoT Hub ≠ Azure Event Hubs
+
+```text
+IoT Hub
+→ dispositivos IoT
+
+Event Hubs
+→ ingestão genérica de grandes volumes de eventos
+```
+
+---
+
+## Azure Data Factory ≠ Azure Databricks
+
+```text
+Data Factory
+→ integração
+→ movimentação
+→ pipelines
+→ ETL / ELT
+
+Databricks
+→ Apache Spark
+→ processamento distribuído
+→ engenharia de dados
+```
+
+---
+
+## Azure Files ≠ Azure Data Lake Storage Gen2
+
+```text
+Azure Files
+→ compartilhamento de arquivos
+→ SMB / NFS
+
+ADLS Gen2
+→ armazenamento para analytics
+→ grandes volumes
+→ processamento com engines analíticas
+```
+
+---
+
+## Azure Table Storage ≠ banco de dados relacional
+
+Apesar de utilizar o termo "Table", o Azure Table Storage é um armazenamento **NoSQL chave-valor**.
+
+```text
+Azure Table Storage
+
+PartitionKey
++
+RowKey
+```
+
+Não possui os principais conceitos relacionais, como:
+
+```text
+Foreign Key
+Relacionamentos
+Stored Procedures
+Views
+```
+
+---
+
+## RowKey não é globalmente única
+
+A `RowKey` é única **dentro de uma PartitionKey**.
+
+```text
+PartitionKey + RowKey
+→ identificação do item
+```
+
+---
+
+## Page Blob = VHD
+
+Uma associação que precisei memorizar:
+
+```text
+Page Blob
+→ Virtual Hard Disk
+→ discos de Azure VMs
+```
+
+---
+
+## OLTP ≠ Analytics
+
+```text
+OLTP
+→ transações
+→ CRUD
+→ normalização
+
+Analytics
+→ leitura
+→ agregações
+→ estruturas mais desnormalizadas
+```
+
+---
+
+## Data Lake ≠ Data Warehouse
+
+```text
+Data Lake
+→ arquivos
+→ diferentes formatos
+→ flexibilidade
+
+Data Warehouse
+→ dados estruturados
+→ SQL
+→ fatos e dimensões
+→ analytics
+```
+
+---
+
+## Cosmos DB APIs
+
+```text
+NoSQL
+→ documentos JSON
+
+MongoDB
+→ BSON / MQL
+
+Table
+→ chave-valor
+
+Cassandra
+→ família de colunas
+
+Gremlin
+→ grafos
+```
+
+---
+
+## SQL Server em VM ≠ Managed Instance ≠ Azure SQL Database
+
+```text
+SQL Server em VM
+→ IaaS
+→ maior controle
+
+Managed Instance
+→ PaaS
+→ alta compatibilidade com SQL Server
+
+Azure SQL Database
+→ PaaS
+→ aplicação cloud-native
+→ menor administração
+```
+
+---
+
+# 🧠 Erros que viraram regra mental
+
+Depois de errar ou ficar em dúvida em algumas questões, transformei os conceitos em associações rápidas para facilitar a revisão.
+
+```text
+Mover ou orquestrar dados
+→ Data Factory
+
+Processar muito dado
+→ Databricks / Spark
+
+Receber eventos
+→ Event Hubs
+
+Receber dados de dispositivos
+→ IoT Hub
+
+Processar eventos
+→ Stream Analytics
+
+Analisar logs e telemetria
+→ Data Explorer
+
+Compartilhar arquivos
+→ Azure Files
+
+Armazenar grandes volumes para analytics
+→ ADLS Gen2
+
+Disco de VM
+→ Page Blob
+
+Chave-valor
+→ Table Storage
+
+JSON NoSQL
+→ Cosmos DB for NoSQL
+
+MongoDB
+→ BSON
+
+Cassandra
+→ Column Family
+
+Gremlin
+→ Graph
+
+OLTP
+→ CRUD + normalização
+
+Analytics
+→ leitura + desnormalização
+
+Data Warehouse
+→ fatos + dimensões
+
+Data Lake
+→ arquivos
+
+Lakehouse
+→ Data Lake + recursos analíticos
+
+Warehouse no Fabric
+→ analytics estruturado
+
+Eventhouse
+→ eventos + tempo real
+```
+
+---
+
+# 🎯 Como eu pensava nas questões
+
+Quando duas ou mais alternativas pareciam corretas, tentei identificar primeiro **qual era a necessidade principal do cenário**.
+
+```text
+A questão quer armazenar?
+        ↓
+Qual tipo de dado?
+
+A questão quer processar?
+        ↓
+Batch ou streaming?
+
+A questão quer movimentar?
+        ↓
+Pipeline / Data Factory
+
+A questão quer analisar?
+        ↓
+SQL, Spark, BI ou tempo real?
+
+A questão fala em migração?
+        ↓
+Qual nível de compatibilidade e controle?
+```
+
+A ideia era deixar de escolher serviços apenas pelo nome e passar a associá-los ao **papel que desempenham dentro da arquitetura**.
+
+---
+
+# 📌 Resumo das associações
+
+```text
+ORQUESTRAÇÃO
+→ Azure Data Factory
+
+SPARK
+→ Azure Databricks
+
+EVENTOS
+→ Event Hubs
+
+IOT
+→ IoT Hub
+
+PROCESSAMENTO DE STREAM
+→ Stream Analytics
+
+LOGS E TELEMETRIA
+→ Data Explorer
+
+ARQUIVOS COMPARTILHADOS
+→ Azure Files
+
+DATA LAKE
+→ ADLS Gen2
+
+VHD
+→ Page Blob
+
+KEY/VALUE
+→ Table Storage
+
+JSON / NOSQL
+→ Cosmos DB for NoSQL
+
+MONGODB
+→ BSON / MQL
+
+COLUMN FAMILY
+→ Cassandra
+
+GRAPH
+→ Gremlin
+
+TRANSAÇÕES
+→ OLTP
+
+ANALYTICS
+→ OLAP
+
+DADOS ESTRUTURADOS PARA BI
+→ Data Warehouse
+
+ARQUIVOS + ANALYTICS
+→ Lakehouse
+
+TEMPO REAL NO FABRIC
+→ Eventhouse
+```
+
+---
+
+> Os simulados foram utilizados como ferramenta de diagnóstico durante minha preparação. Estas anotações representam os conceitos que precisei reforçar após identificar dúvidas ou erros recorrentes durante os estudos para a certificação **Microsoft Azure Data Fundamentals (DP-900)**.
