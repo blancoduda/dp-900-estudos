@@ -1,7 +1,6 @@
 # Microsoft Azure Data Fundamentals — DP-900
 
 ![Microsoft Azure](https://img.shields.io/badge/Microsoft%20Azure-Data%20Fundamentals-0078D4?style=for-the-badge\&logo=microsoftazure\&logoColor=white)
-![DP-900](https://img.shields.io/badge/Certification-DP--900-5E5E5E?style=for-the-badge\&logo=microsoft\&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Concluído-2EA44F?style=for-the-badge)
 ![Microsoft Learn](https://img.shields.io/badge/Microsoft%20Learn-Estudos-258FFA?style=for-the-badge\&logo=microsoft\&logoColor=white)
 ![License MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
