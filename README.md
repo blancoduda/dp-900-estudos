@@ -1,19 +1,56 @@
 # Microsoft Azure Data Fundamentals — DP-900
 
 ![Microsoft Azure](https://img.shields.io/badge/Microsoft%20Azure-Data%20Fundamentals-0078D4?style=for-the-badge\&logo=microsoftazure\&logoColor=white)
+![DP-900](https://img.shields.io/badge/Certification-DP--900-5E5E5E?style=for-the-badge\&logo=microsoft\&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Concluído-2EA44F?style=for-the-badge)
 ![Microsoft Learn](https://img.shields.io/badge/Microsoft%20Learn-Estudos-258FFA?style=for-the-badge\&logo=microsoft\&logoColor=white)
 ![License MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 Este repositório reúne meus estudos para a certificação **Microsoft Certified: Azure Data Fundamentals (DP-900)**.
 
-O objetivo é registrar os principais conceitos estudados ao longo da preparação, consolidar o aprendizado e manter um material de consulta sobre fundamentos de dados e os principais serviços de dados disponíveis no Microsoft Azure.
+O objetivo é registrar os principais conceitos estudados durante a preparação, consolidar o aprendizado e compartilhar materiais sobre fundamentos de dados e serviços de dados disponíveis no Microsoft Azure.
 
-## 📚 Como estudei
+Em **julho de 2026**, concluí minha preparação e obtive a certificação **Microsoft Certified: Azure Data Fundamentals (DP-900)**.
 
-Minha preparação foi baseada em diferentes formatos de estudo, combinando conteúdo teórico, vídeos, prática, revisão e simulados.
+## 📚 Como organizei meus estudos
 
-### Microsoft Learn
+Antes de transformar minhas anotações neste repositório, organizei todo o processo de preparação no **Notion**.
+
+Criei um **Kanban de estudos** para acompanhar os módulos da certificação e utilizei um calendário para distribuir os conteúdos ao longo dos dias.
+
+O fluxo era dividido entre:
+
+* não iniciado;
+* em andamento;
+* concluído.
+
+Cada conteúdo estudado era registrado no Notion, junto com minhas próprias anotações, pontos importantes, dúvidas e revisões.
+
+Foi nesse espaço que concentrei inicialmente todo o material que, posteriormente, foi revisado e organizado para se tornar este repositório.
+
+### Exemplo da organização
+
+```text
+📌 Módulo
+   ↓
+📖 Estudo no Microsoft Learn
+   ↓
+🎥 Vídeo complementar
+   ↓
+📝 Anotações no Notion
+   ↓
+❓ Revisão dos pontos de dúvida
+   ↓
+🧪 Simulado
+   ↓
+✅ Conteúdo concluído
+   ↓
+📂 Organização no GitHub
+```
+
+Essa organização também me ajudou a visualizar o progresso da preparação e identificar quais assuntos ainda precisavam de revisão.
+
+## 📘 Microsoft Learn
 
 Utilizei como principal referência a documentação e a trilha oficial da Microsoft para a certificação DP-900:
 
@@ -21,40 +58,41 @@ Utilizei como principal referência a documentação e a trilha oficial da Micro
 
 A documentação oficial foi utilizada para estudar os conceitos cobrados no exame e entender os principais serviços relacionados a dados dentro do Azure.
 
-### Microsoft Learn no YouTube
+## 🎥 Microsoft Learn no YouTube
 
-Também complementei os estudos com conteúdos em vídeo disponibilizados no canal oficial da Microsoft:
+Também complementei os estudos com conteúdos disponibilizados no canal oficial da Microsoft:
 
 [Microsoft Learn — YouTube](https://www.youtube.com/@MicrosoftLearn)
 
-Os vídeos foram úteis principalmente para revisar conceitos, reforçar conteúdos estudados na documentação e visualizar de forma mais prática alguns dos serviços apresentados.
+Os vídeos foram utilizados principalmente para revisar conceitos, complementar os conteúdos da documentação e visualizar alguns temas de maneira mais prática.
 
-### Simulados
+## 🧪 Simulados
 
 Durante a preparação, realizei simulados para:
 
 * identificar assuntos que precisavam de mais revisão;
 * me familiarizar com o formato das questões;
 * reforçar conceitos importantes;
-* acompanhar minha evolução ao longo dos estudos;
-* revisar conteúdos a partir dos erros cometidos.
+* acompanhar minha evolução;
+* revisar os conteúdos a partir dos erros cometidos.
 
-Os simulados foram uma parte importante do processo, principalmente para identificar pontos de atenção antes do exame.
+Os erros dos simulados passaram a fazer parte do próprio processo de estudo, direcionando novas revisões.
 
-### Agente de estudos com GPT
+## 🤖 Agente pessoal de estudos com GPT
 
-Como apoio adicional, criei um **agente pessoal no GPT voltado especificamente para meus estudos da DP-900**.
+Como apoio adicional, criei um **agente pessoal no GPT voltado especificamente para minha preparação para a DP-900**.
 
-Utilizei esse agente para:
+Utilizei o agente para:
 
 * revisar conteúdos;
 * tirar dúvidas;
-* gerar perguntas sobre os temas estudados;
-* comparar conceitos semelhantes;
-* criar situações práticas;
-* testar minha compreensão antes do exame.
+* gerar perguntas;
+* comparar conceitos;
+* criar exemplos;
+* simular questões;
+* testar minha compreensão antes da prova.
 
-A ideia foi utilizar IA como uma ferramenta complementar de estudo ativo, mantendo a documentação oficial da Microsoft como principal fonte de referência.
+A IA foi utilizada como ferramenta complementar de estudo ativo, mantendo a documentação oficial da Microsoft como principal referência.
 
 ## 🎯 Objetivo deste repositório
 
@@ -69,20 +107,23 @@ Além de registrar minha preparação para a certificação, este repositório t
 * análise de dados;
 * serviços de dados disponíveis no Microsoft Azure.
 
-O conteúdo presente neste repositório representa minhas próprias anotações, resumos e interpretações construídas durante o processo de estudo.
+O conteúdo representa minhas próprias anotações, resumos e interpretações construídas durante o processo de estudo.
 
 ## 🏅 Certificação
 
-**Microsoft Certified: Azure Data Fundamentals (DP-900)**
+### Microsoft Certified: Azure Data Fundamentals — DP-900
 
-✅ Estudos concluídos
-✅ Conteúdo oficial Microsoft Learn revisado
-✅ Videoaulas utilizadas como apoio
+**Certificação obtida em julho de 2026.**
+
+✅ Microsoft Learn concluído
+✅ Conteúdos em vídeo revisados
+✅ Anotações organizadas no Notion
+✅ Kanban de acompanhamento dos módulos
 ✅ Simulados realizados
-✅ Revisões com agente de estudos em GPT
-✅ Certificação DP-900 concluída
+✅ Revisões com agente pessoal em GPT
+✅ Certificação DP-900 obtida
 
-A preparação para a DP-900 faz parte da minha jornada de desenvolvimento profissional em dados, cloud e tecnologias do ecossistema Microsoft Azure.
+Este repositório representa a consolidação do material que utilizei durante essa jornada de preparação.
 
 ## 📄 Licença
 
